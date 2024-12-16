@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .gradient-linear {
+    @apply bg-gradient-to-b from-[#0A1400] via-[#031400] to-[#001400];
+  }
+  .gradient-radial {
+    @apply bg-radial-gradient from-[#0A1400] via-[#031400] to-[#001400];
+  }
+}
