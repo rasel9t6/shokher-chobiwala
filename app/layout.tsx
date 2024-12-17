@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
-import './globals.css';
+import '../styles/globals.css';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -25,8 +25,8 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${inter.variable} ${playfair.variable}  flex h-screen w-full flex-col
-        items-center justify-between font-inter antialiased`}
+        className={`${inter.variable} ${playfair.variable}  flex-start-col h-screen w-full
+          bg-olive font-inter antialiased`}
       >
         {children}
       </body>

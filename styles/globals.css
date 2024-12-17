@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '../styles/theme.css';
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .flex-center-col {
+    @apply flex flex-col items-center justify-center;
+  }
+  .flex-between-col {
+    @apply flex flex-col items-center justify-between;
+  }
+  .flex-start-col {
+    @apply flex flex-col items-center justify-start;
+  }
+  .flex-between-row {
+    @apply flex flex-row items-center justify-between;
+  }
+}
