@@ -2,9 +2,9 @@ import Logo from '../Logo';
 
 export default function Nav() {
   return (
-    <div className='flex-between-row z-10 h-[100px] w-full px-10  pb-[60px] pt-[30px]'>
+    <div className='flex-between-row z-10 w-full'>
       <Logo />
-      <ul className='flex-between-row gap-4  text-base font-[600] uppercase tracking-[-0.96px] text-gold-800'>
+      <ul className='flex-between-row  gap-5 text-sm font-semibold uppercase tracking-tighter'>
         <li>Home</li>
         <li>contact </li>
         <li>albums</li>
