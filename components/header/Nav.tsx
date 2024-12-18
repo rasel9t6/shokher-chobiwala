@@ -4,7 +4,7 @@ export default function Nav() {
   return (
     <div className='flex-between-row z-10 w-full'>
       <Logo />
-      <ul className='flex-between-row  gap-5 text-sm font-semibold uppercase tracking-tighter'>
+      <ul className=' sm:flex-between-row hidden  gap-5 text-sm font-semibold uppercase tracking-tighter'>
         <li>Home</li>
         <li>contact </li>
         <li>albums</li>

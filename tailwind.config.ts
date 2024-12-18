@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss';
-
+import { PluginAPI } from 'tailwindcss/types/config';
 export default {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      maskImage: {
+        'custom-gradient':
+          'linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 25.4%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 73.95%, rgba(0, 0, 0, 0) 100%)',
+      },
       backgroundImage: {
         'radial-gradient':
           'radial-gradient(circle, var(--tw-gradient-from) 0%, var(--tw-gradient-via) 50%, var(--tw-gradient-to) 100%)',
@@ -47,6 +51,16 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }: PluginAPI) {
+      addUtilities({
+        '.mask-gradient': {
+          '-webkit-mask-image':
+            'linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 25.39590371621621%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 73.94777590090091%, rgba(0, 0, 0, 0) 100%)',
+          'mask-image':
+            'linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 25.39590371621621%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 73.94777590090091%, rgba(0, 0, 0, 0) 100%)',
+        },
+      });
+    },
+  ],
 } satisfies Config;
-

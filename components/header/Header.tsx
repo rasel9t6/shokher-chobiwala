@@ -1,10 +1,11 @@
+import { motion } from 'motion/react';
 import CustomText from './CustomText';
 import Hero from './Hero';
 import Nav from './Nav';
 
 export default function Header() {
   return (
-    <header className='flex-start-col h-screen w-full flex-nowrap px-10'>
+    <motion.header className='flex-start-col h-screen w-full flex-nowrap px-6 sm:px-10'>
       <div className='flex-between-col z-10 size-full h-screen pb-[60px] pt-[50px] text-3xl'>
         <Nav />
         <div className='w-full'>
@@ -20,6 +21,6 @@ export default function Header() {
         </div>
       </div>
       <Hero />
-    </header>
+    </motion.header>
   );
 }
